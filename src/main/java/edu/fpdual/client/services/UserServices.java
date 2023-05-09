@@ -26,13 +26,19 @@ public class UserServices {
      */
     @Consumes(MediaType.APPLICATION_JSON)
     public Set<Usuario> getAllUsers() {
-        GenericType<Set<Usuario>> type = new GenericType<Set<Usuario>>() {};
+        GenericType<Set<Usuario>> type = new GenericType<>() {
+        };
 
         return webTarget.path("users/getAll")
                 .request(MediaType.APPLICATION_JSON)
                 .get(type);
     }
 
+    /**
+     *
+     * @param user usuario a insertar (El nick debe no estar ya registrado)
+     * @return devuelve true si el usuario ha sido registrado correctamente
+     */
     public boolean insertUser(Usuario user) {
         return webTarget.path("users/insert/")
                 .request(MediaType.APPLICATION_JSON)
@@ -50,6 +56,11 @@ public class UserServices {
                 .post(Entity.entity(user, MediaType.APPLICATION_JSON), String.class);
     }
 
+    /**
+     *
+     * @param nick nick del usuario
+     * @return devuelve una instancia de la clase usuario con ese nick o null si el usuario no existe
+     */
     public Usuario userFromNick(String nick) {
         return webTarget.path("users/userFromNick/")
                 .request(MediaType.APPLICATION_JSON)
@@ -57,6 +68,11 @@ public class UserServices {
     }
 
 
+    /**
+     *
+     * @param nick del usuario
+     * @return devuelve true si el usuario existe o false si el usuario no existe
+     */
     public Boolean existeNick(String nick) {
 
         return webTarget.path("users/existe/" + nick)

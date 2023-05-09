@@ -8,11 +8,14 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * Filtro que redirecciona a la pagina de login si la sesion no está iniciada
+ */
 @WebFilter(filterName="FiltroSesion", urlPatterns={"/comun/*"}, dispatcherTypes= {DispatcherType.REQUEST,DispatcherType.FORWARD})
 public class FiltroSesion implements  Filter {
 
     @Override
-    public void init(FilterConfig filterConfig) throws ServletException {
+    public void init(FilterConfig filterConfig){
     }
 
     @Override

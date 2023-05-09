@@ -12,13 +12,13 @@
   </session-config>
 
   <!-- ERROR -->
-  <!--error-page>
+  <error-page>
     <error-code>500</error-code>
-    <location>/comun/error500.jsp</location>
+    <location>/src/main/webapp/comun/error500.jsp</location>
   </error-page>
   <error-page>
     <error-code>404</error-code>
-    <location>/comun/error404.jsp</location>
-  </error-page-->
+    <location>/src/main/webapp/comun/error404.jsp</location>
+  </error-page>
 
 </web-app>

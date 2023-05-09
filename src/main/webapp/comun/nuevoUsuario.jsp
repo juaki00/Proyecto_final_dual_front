@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../css/all.css">
     <style>
         .login {
-            background: url('./dist/images/login-new.jpeg')
+            background: url('./imagenes/fondo.png')
         }
     </style>
     <title>Register</title>
@@ -59,7 +59,7 @@
                     </button>
                 </div>
                 <a class="inline-block right-0 align-baseline font-bold text-sm text-500 hover:text-blue-800"
-                   href="login.html">
+                   href="#">
                     Already have an account ?
                 </a>
             </form>

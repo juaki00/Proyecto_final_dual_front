@@ -2,9 +2,6 @@ package edu.fpdual.client.dto;
 
 import lombok.*;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
-
 @Setter
 @Getter
 @NoArgsConstructor
@@ -12,6 +9,10 @@ import java.sql.SQLException;
 @EqualsAndHashCode
 @ToString
 @Builder
+
+/*
+ *  Representacion de un usuario registrado en el sistema
+ */
 public class Usuario {
     private String nick;
     private String password;
@@ -23,13 +24,5 @@ public class Usuario {
     public Usuario(String nick) {
         this.nick = nick;
     }
-
-//    public Usuario(ResultSet result) throws SQLException {
-//        setNick(result.getString("nick"));
-//        setNombre(result.getString("nombre"));
-//        setPassword(result.getString("passwd"));
-//        setApellido(result.getString("apellido"));
-//        setTelefono(result.getString("telefono"));
-//        setEmail(result.getString("email"));
-//    }
+    
 }

@@ -7,21 +7,21 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * Cierra la sesion actual
+ */
 @WebServlet(name = "ServletLogout", urlPatterns = {"/servlet-logout"})
 public class ServletLogout extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
-            throws
-            ServletException,
-            IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         doPost(req, resp);
     }
 
+    /**
+     * Se cambia la variable de sesion a null
+     */
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp)
-            throws
-            ServletException,
-            IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
             req.getSession().setAttribute("usuarioSesion", null);
             req.getRequestDispatcher("/index.jsp").forward(req, resp);
     }
