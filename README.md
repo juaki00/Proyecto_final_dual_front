@@ -1,2 +1,1 @@
-# FpDual2022JaxRsClient
-A Jax Rs Client based in Jersey
+# Proyecto final parte front
