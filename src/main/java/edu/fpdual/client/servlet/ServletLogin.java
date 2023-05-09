@@ -41,7 +41,7 @@ public class ServletLogin extends HttpServlet {
                 req.getSession().setMaxInactiveInterval(40);
                 req.getSession().setAttribute("listaUsuarios", userService.getAllUsers());
                 req.getSession().setAttribute("usuarioSesion", usuario);
-                resp.sendRedirect("/front/comun/usuarios.jsp");
+                resp.sendRedirect("/FpDualJaxRsClient/comun/usuarios.jsp");
             } else {
                 req.setAttribute("error", "Error al insertar usuario o contraseña");
 

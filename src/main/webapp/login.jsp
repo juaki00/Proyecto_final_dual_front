@@ -19,7 +19,7 @@
 <div class="container mx-auto h-full flex flex-1 justify-center items-center">
     <div class="w-full max-w-lg">
         <div class="leading-loose">
-            <form action="/front/servlet-login" method="POST" class="max-w-xl m-4 p-10 bg-white rounded shadow-xl">
+            <form action="/FpDualJaxRsClient/servlet-login" method="POST" class="max-w-xl m-4 p-10 bg-white rounded shadow-xl">
                 <p class="text-gray-800 font-medium text-center text-lg font-bold">Login</p>
                 <div class="">
                     <label class="block text-sm text-gray-00" for="username">Usuario</label>

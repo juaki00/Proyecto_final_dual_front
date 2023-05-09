@@ -19,9 +19,9 @@ public class ServletVolverLogin extends HttpServlet {
         Usuario usuario = (Usuario)
                 req.getSession().getAttribute("usuarioSesion");
         if(usuario!=null){
-            resp.sendRedirect("/front/servlet-login");
+            resp.sendRedirect("/FpDualJaxRsClient/servlet-login");
         } else {
-            resp.sendRedirect("/front/nuevoUsuario.jsp");
+            resp.sendRedirect("/FpDualJaxRsClient/nuevoUsuario.jsp");
         }
     }
 }

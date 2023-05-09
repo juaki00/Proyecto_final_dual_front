@@ -43,7 +43,7 @@
     <%}%>
 
 </table>
-<form action="/front/comun/nuevoUsuario.jsp">
+<form action="/FpDualJaxRsClient/comun/nuevoUsuario.jsp">
     <button type="submit" class="nuevo">Nuevo</button>
 </form>
 </body>
