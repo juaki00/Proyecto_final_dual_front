@@ -16,16 +16,22 @@ import java.io.IOException;
 @WebServlet(name = "ServletVictoria", urlPatterns = {"/servlet-victoria"})
 public class ServletVictoria extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        doPost(req, resp);
+    protected void doGet(HttpServletRequest servletRequest, HttpServletResponse resp) throws ServletException, IOException {
+        doPost(servletRequest, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
 
-        req.setAttribute("victoria", "Enhorabuena, has ganado 5 puntos");
-
-        req.getRequestDispatcher("/login.jsp").forward(req, resp);
+        Usuario usuario = (Usuario)req.getSession().getAttribute("usuarioSesion");
+        int puntos = (int)req.getSession().getAttribute("nPuntos");
+        if(usuario != null) {
+            UserServices service = new UserServices();
+            service.sumaPuntos(usuario, 5);
+            req.setAttribute("victoria", "Enhorabuena, has ganado 5 puntos");
+        }
+//        req.getRequestDispatcher("/front/comun/usuarios.jsp").forward(req, resp);
+//            resp.sendRedirect("/front/comun/usuarios.jsp");
     }
 }

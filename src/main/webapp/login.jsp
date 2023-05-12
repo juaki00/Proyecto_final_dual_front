@@ -20,10 +20,10 @@
     <div class="w-full max-w-lg">
         <div class="leading-loose">
             <form action="./servlet-login" method="POST" class="max-w-xl m-4 p-10 bg-white rounded shadow-xl">
-                <p class="text-gray-800 font-medium text-center text-lg font-bold">Login</p>
+                <p class="text-gray-800 font-medium text-center text-lg font-bold">Iniciar sesion</p>
                 <div class="">
                     <label class="block text-sm text-gray-00" for="username">Usuario</label>
-                    <input class="w-full px-5 py-1 text-gray-700 bg-gray-200 rounded" id="username" name="usuario" type="text" required="" placeholder="User Name" aria-label="username">
+                    <input class="w-full px-5 py-1 text-gray-700 bg-gray-200 rounded" id="username" name="usuario" type="text" required="" placeholder="Nombre de usuario" aria-label="username">
                 </div>
                 <div class="mt-2">
                     <label class="block text-sm text-gray-600" for="password">Contraseña</label>
@@ -31,12 +31,9 @@
                 </div>
                 <div class="mt-4 items-center justify-between">
                     <button class="px-4 py-1 text-white font-light tracking-wider bg-gray-900 rounded" type="submit">Iniciar sesion</button>
-                    <a class="inline-block right-0 align-baseline  font-bold text-sm text-500 hover:text-blue-800" href="#">
-                        Forgot Password?
-                    </a>
                 </div>
-                <a class="inline-block right-0 align-baseline font-bold text-sm text-500 hover:text-blue-800" href="#">
-                    Not registered ?
+                <a class="inline-block right-0 align-baseline font-bold text-sm text-500 hover:text-blue-800" href="nuevoUsuario.jsp">
+                    Registrate
                 </a>
 
                 <%-- Errores --%>

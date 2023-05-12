@@ -36,17 +36,6 @@ public class UserServices {
 
     /**
      *
-     * @param user usuario a insertar (El nick debe no estar ya registrado)
-     * @return devuelve true si el usuario ha sido registrado correctamente
-     */
-    public boolean insertUser(Usuario user) {
-        return webTarget.path("users/insert/")
-                .request(MediaType.APPLICATION_JSON)
-                .post(Entity.entity(user, MediaType.APPLICATION_JSON), Boolean.class);
-    }
-
-    /**
-     *
      * @param user nick del usuario
      * @return devuelve la contraseña del usuario
      */
@@ -79,5 +68,24 @@ public class UserServices {
                 .request(MediaType.APPLICATION_JSON)
                 .get(Boolean.class);
     }
+
+    /**
+     *
+     * @param user usuario a insertar (El nick debe no estar ya registrado)
+     * @return devuelve true si el usuario ha sido registrado correctamente
+     */
+    public Boolean insertUser(Usuario user) {
+        return webTarget.path("users/insert/")
+                .request(MediaType.APPLICATION_JSON)
+                .post(Entity.entity(user, MediaType.APPLICATION_JSON), Boolean.class);
+    }
+
+    public Boolean sumaPuntos(Usuario user, int p) {
+        return webTarget.path("users/sumaPuntos/")
+                .request(MediaType.APPLICATION_JSON)
+                .header("puntos",p)
+                .post(Entity.entity(user, MediaType.APPLICATION_JSON), Boolean.class);
+    }
+
 
 }
