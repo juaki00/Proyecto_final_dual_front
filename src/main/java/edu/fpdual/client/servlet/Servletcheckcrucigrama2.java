@@ -9,6 +9,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 /**
  * Comprueba que el usuario y contraseña son correctos e inicia sesion
@@ -16,7 +17,7 @@ import java.io.IOException;
 @WebServlet(name = "Servletcheckcrucigrama2", urlPatterns = {"/servlet-check-crucigrama2"})
 public class Servletcheckcrucigrama2 extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         doPost(req, resp);
     }
 
@@ -88,13 +89,15 @@ public class Servletcheckcrucigrama2 extends HttpServlet {
             }
 
             req.setAttribute("enhorabuena", "Enhorabuena, has ganado " + puntos + " puntos por acertar las palabras: " + palabrasAcertadas);
+            req.setAttribute("nPuntos",puntos);
             req.getRequestDispatcher("/servlet-victoria").forward(req, resp);
 
         //Si hay alguna excepcion se redirige a la pagina login y se envia un mensaje de error
-        }catch (Exception e){
-            req.setAttribute("error", "Error al conectarse a la base de datos");
+        } catch (Exception e){
+            req.setAttribute("error", e.getMessage());
             req.getRequestDispatcher("/login.jsp").forward(req, resp);
         }
 
     }
 }
+

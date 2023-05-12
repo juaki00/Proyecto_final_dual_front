@@ -19,7 +19,7 @@
 <form action="../servlet-ranking">
     <button type="submit" class="nuevo">Ver Ranking</button>
 </form>
-<form action="./juegos.jsp">
+<form action="juegos2.jsp">
     <button type="submit" class="nuevo">Pagina de juegos</button>
 </form>
 

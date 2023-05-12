@@ -25,11 +25,11 @@ public class ServletVictoria extends HttpServlet {
 
 
         Usuario usuario = (Usuario)req.getSession().getAttribute("usuarioSesion");
-        int puntos = (int)req.getSession().getAttribute("nPuntos");
         if(usuario != null) {
             UserServices service = new UserServices();
-            service.sumaPuntos(usuario, 5);
-            req.setAttribute("victoria", "Enhorabuena, has ganado 5 puntos");
+            int puntos = (int)req.getSession().getAttribute("nPuntos");
+            service.sumaPuntos(usuario, puntos);
+
         }
 //        req.getRequestDispatcher("/front/comun/usuarios.jsp").forward(req, resp);
 //            resp.sendRedirect("/front/comun/usuarios.jsp");

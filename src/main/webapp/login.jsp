@@ -1,51 +1,61 @@
 <%@ page pageEncoding="UTF-8" %>
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <title>Login | Tailwind Admin</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <head>
 
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/all.css">
-    <style>
-        .login{
-        background: url('./comun/imagenes/fondo.png')
-        }
-    </style>
-</head>
+    <%@include file="head.jsp"%>
+  </head>
+<body>
+<%@include file="navBar.jsp"%>
 
-<body class="h-screen font-sans login bg-cover">
-<div class="container mx-auto h-full flex flex-1 justify-center items-center">
-    <div class="w-full max-w-lg">
-        <div class="leading-loose">
-            <form action="./servlet-login" method="POST" class="max-w-xl m-4 p-10 bg-white rounded shadow-xl">
-                <p class="text-gray-800 font-medium text-center text-lg font-bold">Iniciar sesion</p>
-                <div class="">
-                    <label class="block text-sm text-gray-00" for="username">Usuario</label>
-                    <input class="w-full px-5 py-1 text-gray-700 bg-gray-200 rounded" id="username" name="usuario" type="text" required="" placeholder="Nombre de usuario" aria-label="username">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="page-content">
+
+            <!-- Formulario -->
+            <form action="./servlet-login" method="POST">
+                <p>Iniciar sesion</p>
+                <div class="mb-3 row">
+                    <label for="nombre" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="usuario" class="form-control" id="nombre">
+                    </div>
                 </div>
-                <div class="mt-2">
-                    <label class="block text-sm text-gray-600" for="password">Contraseña</label>
-                    <input class="w-full px-5  py-1 text-gray-700 bg-gray-200 rounded" id="password" name="contrasena" type="password" required="" placeholder="*******" aria-label="password">
+                <div class="mb-3 row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                    <div class="col-sm-10">
+                        <input type="password" name="contrasena" class="form-control" id="inputPassword">
+                    </div>
                 </div>
-                <div class="mt-4 items-center justify-between">
-                    <button class="px-4 py-1 text-white font-light tracking-wider bg-gray-900 rounded" type="submit">Iniciar sesion</button>
+                <div>
+                    <button class="px-4 py-1 text-black-dark font-light tracking-wider bg-gray-900 rounded" type="submit">Iniciar sesion</button>
                 </div>
-                <a class="inline-block right-0 align-baseline font-bold text-sm text-500 hover:text-blue-800" href="nuevoUsuario.jsp">
+                <a href="nuevoUsuario.jsp">
                     Registrate
                 </a>
-
-                <%-- Errores --%>
-                <%if(request.getAttribute("error")!=null){%>
-                <p><%=request.getAttribute("error")%></p>
-                <%}%>
-
             </form>
+            <!-- Fin Formulario -->
 
         </div>
+      </div>
     </div>
-</div>
-</body>
+  </div>
+  
+ <%@include file="footer.jsp"%>
+
+<!-- Scripts -->
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+<script src="assets/js/isotope.min.js"></script>
+<script src="assets/js/owl-carousel.js"></script>
+<script src="assets/js/tabs.js"></script>
+<script src="assets/js/popup.js"></script>
+<script src="assets/js/custom.js"></script>
+
+  </body>
 
 </html>
