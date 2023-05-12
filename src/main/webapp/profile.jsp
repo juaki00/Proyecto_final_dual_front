@@ -32,10 +32,10 @@
                   </div>
                   <div class="col-lg-4 align-self-center">
                     <ul>
-                      <li>Juegos<span>3</span></li>
-                      <li>Amigos<span>16</span></li>
-                      <li>Puntos<span>1569</span></li>
-                      <li>Ranking<span>#16</span></li>
+                      <li>Nombre<span><%=u.getNombre() + " " + u.getApellido()%></span></li>
+                      <li>Nick<span><%=u.getNick()%></span></li>
+                      <li>Puntos<span><%=u.getPuntos()%></span></li>
+                      <li>Email<span><%=u.getEmail()%></span></li>
                     </ul>
                   </div>
                 </div>
