@@ -9,7 +9,6 @@ import lombok.*;
 @EqualsAndHashCode
 @ToString
 @Builder
-
 /*
  *  Representacion de un usuario registrado en el sistema
  */
