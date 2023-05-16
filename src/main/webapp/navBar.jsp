@@ -30,7 +30,7 @@
                         <li><a href="/front/ranking.jsp">Ranking</a></li>
                         <%if(request.getSession().getAttribute("usuarioSesion")!=null){%>
                             <%Usuario u = (Usuario) request.getSession().getAttribute("usuarioSesion");%>
-                            <a><li><%="Puntos: " + u.getPuntos()%></li></a>
+                        <li><%="Puntos: " + u.getPuntos()%></li>
 
                             <li><a href="/front/profile.jsp"><p><%=u.getNick()%></p></a></li>
                         <%} else {%>

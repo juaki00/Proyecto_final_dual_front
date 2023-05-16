@@ -1,9 +1,13 @@
 C:\Users\j.romero.sanchez\IdeaProjects\Proyecto_final_dual_front\src\main\java\edu\fpdual\client\servlet\ServletVictoria.java
 C:\Users\j.romero.sanchez\IdeaProjects\Proyecto_final_dual_front\src\main\java\edu\fpdual\client\filter\FiltroSesion.java
-C:\Users\j.romero.sanchez\IdeaProjects\Proyecto_final_dual_front\src\main\java\edu\fpdual\client\servlet\ServletLogout.java
 C:\Users\j.romero.sanchez\IdeaProjects\Proyecto_final_dual_front\src\main\java\edu\fpdual\client\dto\Usuario.java
 C:\Users\j.romero.sanchez\IdeaProjects\Proyecto_final_dual_front\src\main\java\edu\fpdual\client\Main.java
+C:\Users\j.romero.sanchez\IdeaProjects\Proyecto_final_dual_front\src\main\java\edu\fpdual\client\services\UserServices.java
+C:\Users\j.romero.sanchez\IdeaProjects\Proyecto_final_dual_front\src\main\java\edu\fpdual\client\servlet\ServletSumaPuntos.java
+C:\Users\j.romero.sanchez\IdeaProjects\Proyecto_final_dual_front\src\main\java\edu\fpdual\client\servlet\ServletLogout.java
+C:\Users\j.romero.sanchez\IdeaProjects\Proyecto_final_dual_front\src\main\java\edu\fpdual\client\email\CredentialsConstants.java
+C:\Users\j.romero.sanchez\IdeaProjects\Proyecto_final_dual_front\src\main\java\edu\fpdual\client\servlet\ServletRanking.java
+C:\Users\j.romero.sanchez\IdeaProjects\Proyecto_final_dual_front\src\main\java\edu\fpdual\client\dto\RankinUsuarios.java
+C:\Users\j.romero.sanchez\IdeaProjects\Proyecto_final_dual_front\src\main\java\edu\fpdual\client\email\Sender.java
 C:\Users\j.romero.sanchez\IdeaProjects\Proyecto_final_dual_front\src\main\java\edu\fpdual\client\servlet\ServletLogin.java
 C:\Users\j.romero.sanchez\IdeaProjects\Proyecto_final_dual_front\src\main\java\edu\fpdual\client\servlet\nuevoUsuarioServlet.java
-C:\Users\j.romero.sanchez\IdeaProjects\Proyecto_final_dual_front\src\main\java\edu\fpdual\client\servlet\Servletcheckcrucigrama2.java
-C:\Users\j.romero.sanchez\IdeaProjects\Proyecto_final_dual_front\src\main\java\edu\fpdual\client\services\UserServices.java
