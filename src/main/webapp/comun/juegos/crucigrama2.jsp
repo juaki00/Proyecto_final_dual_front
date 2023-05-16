@@ -1,7 +1,7 @@
 <%@ page pageEncoding="UTF-8" %>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="../../../css/crucigrama2.css">
+	<link rel="stylesheet" type="text/css" href="../../css/crucigrama2.css">
 </head>
 <body>
 

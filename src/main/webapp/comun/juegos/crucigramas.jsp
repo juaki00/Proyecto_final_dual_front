@@ -13,16 +13,16 @@
 <form action="../servlet-logout">
     <button type="submit" class="login">logout</button>
 </form>
-<form action="../../../contacto.jsp">
+<form action="../../contacto.jsp">
     <button type="submit" class="nuevo">Contactanos</button>
 </form>
 <form action="./servlet-ranking">
     <button type="submit" class="nuevo">Ver Ranking</button>
 </form>
-<form action="../../indexLogeado.jsp">
+<form action="../indexLogeado.jsp">
     <button type="submit" class="nuevo">Inicio</button>
 </form>
-<form action="crucigrama1.jsp">
+<form action="../../juego2/crucigrama1.jsp">
     <button type="submit" class="nuevo">Crucigrama1</button>
 </form>
 <form action="crucigrama2.jsp">

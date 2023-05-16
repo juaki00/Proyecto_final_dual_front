@@ -1,71 +1,90 @@
 <%@ page pageEncoding="UTF-8" %>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/all.css">
-    <style>
-        .login {
-            background: url('comun/imagenes/fondo.png')
-        }
-    </style>
-    <title>Nueva cuenta</title>
-</head>
-<body class="h-screen font-sans login bg-cover">
-<div class="container mx-auto h-full flex flex-1 justify-center items-center">
-    <div class="w-full max-w-lg">
-        <div class="leading-loose">
-            <form action="../nuevo_usuario" method="POST" class="max-w-xl m-4 p-10 bg-white rounded shadow-xl">
-                <p class="text-gray-800 font-medium">Crear nueva cuenta</p>
 
-                <%if (request.getSession().getAttribute("existe") != null) {%>
-                <p><%=request.getSession().getAttribute("existe")%>
-                </p>
-                <%}%>
+  <head>
 
-                <div class="">
-                    <label class="block text-sm text-gray-00" for="cus_name">Usuario</label>
-                    <input class="w-full px-5 py-1 text-gray-700 bg-gray-200 rounded" id="cus_nick" type="text"
-                           name="nick" required="" placeholder="Nombre de usuario" aria-label="Name">
+    <%@include file="head.jsp"%>
+  </head>
+<body>
+<%@include file="navBar.jsp"%>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="page-content">
+
+            <!-- Formulario -->
+            <form action="./nuevo_usuario" method="POST">
+                <p><h3>Regístrate</h3></p><br>
+                <div class="mb-3 row">
+                    <label class="col-sm-2 col-form-label" for="cus_nick">Usuario</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" id="cus_nick" type="text"
+                               name="nick" required="" placeholder="Nombre de usuario" aria-label="Name">
+                    </div>
                 </div>
-                <div class="mt-2">
-                    <label class="block text-sm text-gray-600" for="cus_email">Contraseña</label>
-                    <input class="w-full px-5  py-4 text-gray-700 bg-gray-200 rounded" id="cus_pass" type="password"
-                           name="passwd" required="" placeholder="Contraseña" aria-label="Email">
+                <div class="mb-3 row">
+                    <label class="col-sm-2 col-form-label" for="cus_pass">Contraseña</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" id="cus_pass" type="password"
+                               name="passwd" required="" placeholder="Contraseña" aria-label="Email">
+                    </div>
                 </div>
-                <div class="">
-                    <label class="block text-sm text-gray-00" for="cus_name">Nombre</label>
-                    <input class="w-full px-5 py-1 text-gray-700 bg-gray-200 rounded" id="cus_name" type="text"
-                           name="nombre" required="" placeholder="Nombre" aria-label="Name">
+                <div class="mb-3 row">
+                    <label class="col-sm-2 col-form-label" for="cus_name">Nombre</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" id="cus_name" type="text"
+                               name="nombre" required="" placeholder="Nombre" aria-label="Name">
+                    </div>
                 </div>
-                <div class="mt-2">
-                    <label class="block text-sm text-gray-600" for="cus_email">Apellido</label>
-                    <input class="w-full px-5  py-4 text-gray-700 bg-gray-200 rounded" id="cus_apellido" type="text"
-                           name="apellido" required="" placeholder="Apellido" aria-label="Email">
+                <div class="mb-3 row">
+                    <label class="col-sm-2 col-form-label" for="cus_apellido">Apellido</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" id="cus_apellido" type="text"
+                               name="apellido" required="" placeholder="Apellido" aria-label="Email">
+                    </div>
                 </div>
-                <div class="mt-2">
-                    <label class=" block text-sm text-gray-600" for="cus_email">Telefono</label>
-                    <input class="w-full px-2 py-2 text-gray-700 bg-gray-200 rounded" id="cus_tel" type="tel"
-                           name="telefono" required="" placeholder="Telefono" aria-label="Email">
+                <div class="mb-3 row">
+                    <label class="col-sm-2 col-form-label" for="cus_tel">Telefono</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" id="cus_tel" type="tel"
+                               name="telefono" required="" placeholder="Telefono" aria-label="Email">
+                    </div>
                 </div>
-                <div class="mt-2">
-                    <label class="block text-sm block text-gray-600" for="cus_email">Correo electrónico</label>
-                    <input class="w-full px-2 py-2 text-gray-700 bg-gray-200 rounded" id="cus_email" type="text"
-                           name="email" required="" placeholder="Correo Electrónico" aria-label="Email">
+                <div class="mb-3 row">
+                    <label class="col-sm-2 col-form-label" for="cus_email">Correo electrónico</label>
+                    <div class="col-sm-10">
+                        <input class="form-control" id="cus_email" type="text"
+                               name="email" required="" placeholder="Correo Electrónico" aria-label="Email">
+                    </div>
                 </div>
-                <div class="mt-4">
-                    <button class="px-4 py-1 text-white font-light tracking-wider bg-gray-900 rounded" type="submit">
-                        Crear cuenta
-                    </button>
+                <div>
+                    <button class="px-4 py-1 text-black-dark font-light tracking-wider bg-gray-900 rounded" type="submit">Regístrate</button>
+
+                    <a href="login.jsp"> Ya tengo cuenta</a>
                 </div>
-                <a class="inline-block right-0 align-baseline font-bold text-sm text-500 hover:text-blue-800"
-                   href="login.jsp">
-                    Ya tengo una cuenta
-                </a>
             </form>
-        </div>
-    </div>
-</div>
+            <!-- Fin Formulario -->
 
-</body>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+ <%@include file="footer.jsp"%>
+
+<!-- Scripts -->
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+<script src="assets/js/isotope.min.js"></script>
+<script src="assets/js/owl-carousel.js"></script>
+<script src="assets/js/tabs.js"></script>
+<script src="assets/js/popup.js"></script>
+<script src="assets/js/custom.js"></script>
+
+  </body>
+
 </html>

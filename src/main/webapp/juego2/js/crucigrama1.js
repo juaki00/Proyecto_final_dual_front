@@ -300,7 +300,7 @@ function OKClick()
 // Called when the "check puzzle" link is clicked.
 function CheckClick()
 {
-    var i, j, x, y, UserEntry, ErrorsFound = 0, EmptyFound = 0, TableCell;
+    var i, j, x, y, UserEntry, ErrorsFound = 0, EmptyFound = 0, TableCell,puntos;
     if (CrosswordFinished) return;
     DeselectCurrentWord();
 
@@ -348,6 +348,12 @@ function CheckClick()
         CrosswordFinished = true;
         document.getElementById("checkbutton").style.display = "none";
     }
+
+    ////////////////////////////////////////////////////////////////////////////////
+    //Calclulo de puntos
+    puntos=4-ErrorsFound-EmptyFound;
+    document.getElementById("puntos").value = puntos;
+    ////////////////////////////////////////////////////////////////////////////////
 
     // If errors were found, just exit now.
     if (ErrorsFound > 0 && EmptyFound > 0)

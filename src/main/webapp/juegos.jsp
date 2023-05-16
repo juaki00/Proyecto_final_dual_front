@@ -23,14 +23,14 @@
                             <div class="owl-features owl-carousel">
                                 <div class="item">
                                     <div class="thumb">
-                                        <a href="sopa/sopa.html">
+                                        <a href="juego2/juego2.jsp">
                                             <img alt="" src="assets/images/cross.png"/>
                                         </a>
                                         <div class="hover-effect">
                                             <h6>2.4K Jugadores</h6>
                                         </div>
                                     </div>
-                                    <h4>Crxsswords<br><span>2.4K Jugadores</span></h4>
+                                    <h4>Crucigramas<br><span>2.4K Jugadores</span></h4>
                                     <ul>
                                         <li><i class="fa fa-star"></i> 4.8</li>
                                     </ul>
@@ -38,7 +38,7 @@
 
                                 <div class="item">
                                     <div class="thumb">
-                                        <a href="juego1/juego1.html">
+                                        <a href="juego1/juego1.jsp">
                                             <img alt="" src="assets/images/wordsearch.png"/>
                                         </a>
                                         <div class="hover-effect">
@@ -76,25 +76,25 @@
                             <ul>
                                 <li>
                                     <img src="assets/images/minicross.png" alt="" class="templatemo-item">
-                                    <a href="sopa/sopa.html">Crxsswords</a>
+                                    <a href="juego2/juego2.jsp">Crucigramas</a>
                                     <h6>Vocabulario</h6>
                                     <span><i class="fa fa-star" style="color: yellow;"></i> 4.8</span>
                                 </li>
                                 <li>
                                     <img src="assets/images/minisearch.png" alt="" class="templatemo-item">
-                                    <a href="juego1/juego1.html">Word Search</a>
+                                    <a href="juego1/juego1.jsp">Ahorcado</a>
                                     <h6>Vocabulario</h6>
                                     <span><i class="fa fa-star" style="color: yellow;"></i> 4.5</span>
                                 </li>
                                 <li>
                                     <img src="assets/images/miniguess.png" alt="" class="templatemo-item">
-                                    <a href="sopa/sopa.html">Guess it!</a>
+                                    <a href="sopa/sopa.html">Adivina la imagen</a>
                                     <h6>Vocabulario</h6>
                                     <span><i class="fa fa-star" style="color: yellow;"></i> 4.2</span>
                                 </li>
                             </ul>
                             <div class="text-button">
-                                <a href="streams.html">¡Sé el mejor!</a>
+                                <a href="ranking.jsp">¡Sé el mejor!</a>
                             </div>
                         </div>
                     </div>

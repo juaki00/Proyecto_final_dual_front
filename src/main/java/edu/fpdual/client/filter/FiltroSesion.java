@@ -11,7 +11,7 @@ import java.io.IOException;
 /**
  * Filtro que redirecciona a la pagina de login si la sesion no está iniciada
  */
-@WebFilter(filterName="FiltroSesion", urlPatterns={"/comun/*","/juegos.jsp","/profile.jsp", "/co"}, dispatcherTypes= {DispatcherType.REQUEST,DispatcherType.FORWARD})
+@WebFilter(filterName="FiltroSesion", urlPatterns={"/juegos.jsp","/profile.jsp","/juego2/*"}, dispatcherTypes= {DispatcherType.REQUEST,DispatcherType.FORWARD})
 public class FiltroSesion implements  Filter {
 
     @Override

@@ -6,7 +6,11 @@ resetBtn = document.querySelector(".reset-btn"),
 typingInput = document.querySelector(".typing-input");
 
 let word, maxGuesses, incorrectLetters = [], correctLetters = [];
+var counter = 0;
 
+function sumarPunto() {
+    document.getElementById("result").value = counter;
+ }
 function randomWord() {
     let ranItem = wordList[Math.floor(Math.random() * wordList.length)];
     word = ranItem.word;
@@ -45,6 +49,8 @@ function initGame(e) {
 
     setTimeout(() => {
         if(correctLetters.length === word.length) {
+            counter++;////////puntos
+            sumarPunto();
             alert(`Congrats! You found the word ${word.toUpperCase()}`);
             return randomWord();
         } else if(maxGuesses < 1) {
