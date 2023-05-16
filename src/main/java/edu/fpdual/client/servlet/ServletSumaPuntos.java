@@ -22,15 +22,12 @@ public class ServletSumaPuntos extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("antes");
         try {
             Usuario usuario = (Usuario) req.getSession().getAttribute("usuarioSesion");
             UserServices servicio = new UserServices();
-            String puntosString = req.getParameter("puntos");
-            System.out.println("puntosString:"+puntosString);
             int puntos = Integer.parseInt(req.getParameter("puntos"));
-            System.out.println("puntos:"+puntos);
             servicio.sumaPuntos(usuario,puntos);
+            req.getSession().setAttribute("usuarioSesion",servicio.userFromNick(usuario.getNick()));
             req.setAttribute("enhorabuena", "Enhorabuena "+usuario.getNombre()+" , has conseguido "+puntos+" puntos.");
             req.getRequestDispatcher("/enhorabuena.jsp").forward(req, resp);
         //Si hay alguna excepcion se redirige a la pagina login y se envia un mensaje de error
