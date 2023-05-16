@@ -28,9 +28,10 @@
                         <li><a href="/front/index.jsp" class="active">Home</a></li>
                         <li><a href="/front/juegos.jsp">Nuestros juegos</a></li>
                         <li><a href="/front/ranking.jsp">Ranking</a></li>
+                        <li><a href="/front/contacto.jsp">Contacto</a></li>
                         <%if(request.getSession().getAttribute("usuarioSesion")!=null){%>
                             <%Usuario u = (Usuario) request.getSession().getAttribute("usuarioSesion");%>
-                        <li><%="Puntos: " + u.getPuntos()%></li>
+                        <li><a><%="Puntos: " + u.getPuntos()%></a></li>
 
                             <li><a href="/front/profile.jsp"><p><%=u.getNick()%></p></a></li>
                         <%} else {%>

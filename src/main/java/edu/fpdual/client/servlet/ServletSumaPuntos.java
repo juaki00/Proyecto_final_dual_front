@@ -26,9 +26,14 @@ public class ServletSumaPuntos extends HttpServlet {
             Usuario usuario = (Usuario) req.getSession().getAttribute("usuarioSesion");
             UserServices servicio = new UserServices();
             int puntos = Integer.parseInt(req.getParameter("puntos"));
-            servicio.sumaPuntos(usuario,puntos);
-            req.getSession().setAttribute("usuarioSesion",servicio.userFromNick(usuario.getNick()));
-            req.setAttribute("enhorabuena", "Enhorabuena "+usuario.getNombre()+" , has conseguido "+puntos+" puntos.");
+            if(puntos==0) {
+                req.setAttribute("enhorabuena", "Lo sentimos " + usuario.getNombre() + " , no has conseguido ningun punto, sigue practicando!");
+            }
+            else{
+                servicio.sumaPuntos(usuario, puntos);
+                req.getSession().setAttribute("usuarioSesion", servicio.userFromNick(usuario.getNick()));
+                req.setAttribute("enhorabuena", "Enhorabuena " + usuario.getNombre() + " , has conseguido " + puntos + " puntos.");
+            }
             req.getRequestDispatcher("/enhorabuena.jsp").forward(req, resp);
         //Si hay alguna excepcion se redirige a la pagina login y se envia un mensaje de error
         } catch (Exception e){

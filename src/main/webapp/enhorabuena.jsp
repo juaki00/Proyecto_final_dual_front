@@ -15,7 +15,10 @@
             <div class="page-content">
 
                 <%if(request.getAttribute("enhorabuena")!=null){%>
-                <p><%=request.getAttribute("enhorabuena")%></p>
+                <p><h5><%=request.getAttribute("enhorabuena")%></h5></p>
+                <%}%>
+                <%if(request.getAttribute("error")!=null){%>
+                <p><h5><%=request.getAttribute("error")%></h5></p>
                 <%}%>
                 <!-- Formulario -->
                 <form action="./index.jsp" method="POST">

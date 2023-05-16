@@ -17,7 +17,7 @@
             <!-- Aqui tu codigo -->
           <!-- Formulario -->
           <form action="./servlet-email" method="POST">
-            <p>Contacta con nosotros</p>
+            <p><h3>Contacta con nosotros</h3></p><br>
             <div class="mb-3 row">
               <label for="motivo" class="col-sm-2 col-form-label">Motivo de tu consulta</label>
               <div class="col-sm-10">
@@ -25,7 +25,7 @@
               </div>
             </div>
             <div class="mb-3 row">
-              <label for="contenido" class="col-sm-2 col-form-label">Password</label>
+              <label for="contenido" class="col-sm-2 col-form-label">Su consulta:</label>
               <div class="col-sm-10">
                 <textarea name="contenido" class="form-control" id="contenido" placeholder="Escriba aquí su consulta"></textarea>
               </div>
