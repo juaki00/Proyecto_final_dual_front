@@ -35,15 +35,14 @@ public class nuevoUsuarioServlet extends HttpServlet {
             //Si el nick existe redireccionamos a la pagina nuevousuario y enviamos el mensaje de error
             if (userServices.existeNick(nickIntroducido)) {
                 req.getSession().setAttribute("existe", "El nick " + nickIntroducido + " ya existe");
-                resp.sendRedirect("/front/comun/nuevoUsuario.jsp");
+                resp.sendRedirect("/front/nuevoUsuario.jsp");
 
             //Si el nick no existe insertamos el usuario
             } else {
                 Usuario user = new Usuario(nickIntroducido, passIntroducido, nombreIntroducido, apellidoIntroducido, telefonoIntroducido, emailIntroducido);
                 userServices.insertUser(user);
                 userServices = new UserServices();
-                req.getSession().setAttribute("listaUsuarios", userServices.getAllUsers());
-                resp.sendRedirect("/front/comun/usuarios.jsp");
+                resp.sendRedirect("/front/login.jsp");
             }
 
 
