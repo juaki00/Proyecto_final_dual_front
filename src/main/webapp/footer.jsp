@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <p>Copyright © 2023 <a href="index.jsp">Kid Zone</a> Company. All rights reserved.
+                <p>2023 <a href="index.jsp">Kid Zone</a> Todos los derechos reservados.
             </div>
         </div>
     </div>

@@ -61,7 +61,10 @@
                 </div>
                 <div>
                     <button class="px-4 py-1 text-black-dark font-light tracking-wider bg-gray-900 rounded" type="submit">Regístrate</button>
-
+                    <%
+                        if(request.getAttribute("existe")!=null){%>
+                    <p><%=request.getAttribute("existe")%></p>
+                    <%}%>
                     <a href="login.jsp"> Ya tengo cuenta</a>
                 </div>
             </form>
