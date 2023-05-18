@@ -32,6 +32,7 @@
                         <%if(request.getSession().getAttribute("usuarioSesion")!=null){%>
                             <%Usuario u = (Usuario) request.getSession().getAttribute("usuarioSesion");%>
                         <li><a><%="Puntos: " + u.getPuntos()%></a></li>
+                        <li><a href="/front/servlet-logout">Cerrar sesion</a></li>
 
                             <li><a href="/front/profile.jsp"><p><%=u.getNick()%></p></a></li>
                         <%} else {%>

@@ -455,27 +455,18 @@ function HashWord(Word)
 </td><td align="right">
 <button id="okbutton" type="button" class="ecw-input ecw-button" onclick="OKClick();" style="font-weight: bold;">OK</button> &nbsp;
 </td></tr></tbody></table>
-<!--//////////////////////////////////////////////////////////////////////////////// -->
-<form action="../servletSumaPuntos">
-	<div style="margin-top: 1em;">
-		<button id="checkbutton" type="input" onclick="CheckClick();" style="display:  none;">Comprobar</button>
-		<input type="hidden" name="puntos" id="puntos" value="0">
-	</div>
-</form>
-<!--//////////////////////////////////////////////////////////////////////////////// -->
 
 </div>
+	<!--//////////////////////////////////////////////////////////////////////////////// -->
+	<form action="../servletSumaPuntos">
+		<div style="margin-top: 1em;">
+			<button id="checkbutton" type="input" onclick="CheckClick();" style="display:  none;">Comprobar</button>
+			<input type="hidden" name="puntos" id="puntos" value="0">
+		</div>
+	</form>
+	<!--//////////////////////////////////////////////////////////////////////////////// -->
 
-<div id="congratulations" class="ecw-answerbox" style="display:none;">
-<h3>Congratulations!</h3>
-<p>You have completed this <a href="http://www.eclipsecrossword.com" style="color: black; text-decoration:none;">crossword puzzle</a>.
-</p>
-<p>If you would like to be able to create interactive
-<a href="http://www.eclipsecrossword.com" style="color: black; text-decoration:none;">crosswords</a>
-like this yourself, get <a href="http://www.eclipsecrossword.com" onclick="this.target='_blank'">EclipseCrossword</a>
-from Green Eclipse&mdash;it's free!
-</p>
-</div>
+
 
 </td></tr></table>
 

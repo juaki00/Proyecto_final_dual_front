@@ -454,14 +454,7 @@ function HashWord(Word)
 <td align="right">
 <button id="okbutton" type="button" class="ecw-input ecw-button" onclick="OKClick();" style="font-weight: bold;">Ok</button> &nbsp;
 </td></tr></tbody></table>
-<!--//////////////////////////////////////////////////////////////////////////////// -->
-<form action="../servletSumaPuntos">
-<div style="margin-top: 1em;">
-	<button id="checkbutton" type="input" class="ecw-input ecw-button" onclick="CheckClick();" style="display:  none;">Comprobar</button>
-	<input type="hidden" name="puntos" id="puntos" value="0">
-</div>
-</form>
-<!--//////////////////////////////////////////////////////////////////////////////// -->
+
 
 </div>
 
@@ -475,7 +468,16 @@ like this yourself, get <a href="http://www.eclipsecrossword.com" onclick="this.
 from Green Eclipse&mdash;it's free!
 </p>
 </div>
-
+	<!--//////////////////////////////////////////////////////////////////////////////// -->
+	<p>
+	<form action="../servletSumaPuntos">
+		<div style="margin-top: 1em;">
+			<button id="checkbutton" type="input" class="ecw-input ecw-button" onclick="CheckClick();" style="display:  none;">Comprobar</button>
+			<input type="hidden" name="puntos" id="puntos" value="0">
+		</div>
+	</form>
+	</p>
+	<!--//////////////////////////////////////////////////////////////////////////////// -->
 </td></tr></table>
 
 <script type="text/javascript"><!--

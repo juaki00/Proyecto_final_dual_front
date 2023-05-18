@@ -23,7 +23,7 @@
         <!--//////////////////////////////////////////////////////////////////////////////// -->
         <form action="../servletSumaPuntos">
           <div style="margin-top: 1em;">
-            <button id="checkbutton" class="chk-button" type="submit">Finalizar</button>
+            <button class="reset-btn" id="checkbutton" class="chk-button" type="submit">Finalizar</button>
             <input type="hidden" name="puntos" id="puntos" value="0">
           </div>
         </form>
