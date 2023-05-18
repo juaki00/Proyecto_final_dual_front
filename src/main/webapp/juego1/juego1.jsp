@@ -1,3 +1,4 @@
+<%@ page pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <!-- Coding By CodingNepal - youtube.com/codingnepal -->
 <html lang="en" dir="ltr">
@@ -14,22 +15,21 @@
         <input type="text" class="typing-input" maxlength="1">
         <div class="inputs"></div>
         <div class="details">
-          <p class="hint">Hint: <span></span></p>
-          <p class="guess-left">Remaining guesses: <span></span></p>
-          <p class="wrong-letter">Wrong letters: <span></span></p>
+          <p class="hint">Pista: <span></span></p>
+          <p class="guess-left">Oportunidades restantes: <span></span></p>
+          <p class="wrong-letter">Letras erróneas: <span></span></p>
         </div>
-        <button class="reset-btn">Reset Game</button>
+        <button class="reset-btn">Siguiente palabra</button>
         <!--//////////////////////////////////////////////////////////////////////////////// -->
         <form action="../servletSumaPuntos">
           <div style="margin-top: 1em;">
-            <button id="checkbutton" type="submit">Check puzzle</button>
-            <input type="number" name="puntos" id="puntos" value="0">
+            <button id="checkbutton" class="chk-button" type="submit">Finalizar</button>
+            <input type="hidden" name="puntos" id="puntos" value="0">
           </div>
         </form>
         <!--//////////////////////////////////////////////////////////////////////////////// -->
       </div>
     </div>
-
     <script src="js/words.js"></script>
     <script src="js/script.js"></script>
 

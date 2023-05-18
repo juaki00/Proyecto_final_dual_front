@@ -53,7 +53,7 @@
 
                                 <div class="item">
                                     <div class="thumb">
-                                        <a href="sopa/sopa.html">
+                                        <a href="juego3/juego3.jsp">
                                             <img alt="" src="assets/images/guess.png"/>
                                         </a>
                                         <div class="hover-effect">
@@ -88,7 +88,7 @@
                                 </li>
                                 <li>
                                     <img src="assets/images/miniguess.png" alt="" class="templatemo-item">
-                                    <a href="sopa/sopa.html">Adivina la imagen</a>
+                                    <a href="juego3/juego3.jsp">Adivina la imagen</a>
                                     <h6>Vocabulario</h6>
                                     <span><i class="fa fa-star" style="color: yellow;"></i> 4.2</span>
                                 </li>

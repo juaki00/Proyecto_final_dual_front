@@ -7,26 +7,23 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+	<div id="main-form">
 	<div id="image-container">
 		<img id="current-image" src="">
 	</div>
+
 	<form id="answer-form">
-		<label for="answer-input">Escribe tu respuesta:</label>
+		<label for="answer-input">¿Qué animal es?</label>
 		<input type="text" id="answer-input" name="answer">
-		<input type="submit" value="Enviar">
+		<input type="submit" id="send" value="Enviar">
 	</form>
+
 	<p id="result"></p>
 	<form action="../servletSumaPuntos">
-	    <button id="resetButton" type="submit" >Terminar juego</button>
+	    <button id="resetButton" class="finish" type="submit" >Terminar juego</button>
 	    <input type="hidden" name="puntos" id="puntos" value="0">
 	</form>
-
-    </div>
-
-
-
-
+		</div>
 	<script src="js/juego3.js"></script>
 </body>
 </html>

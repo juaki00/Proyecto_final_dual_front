@@ -1,21 +1,38 @@
 body {
     font-family: Arial, sans-serif;
+    background-color:#4269f7;
 }
 
 #image-container {
+    margin-top: 40px;
     width: 100%;
     display:flex;
     justify-content: center;
 }
 
 #current-image {
+    margin-top: 20px;
     display:flex;
-    width: 350px;
-    height:500px;
+    width: 200px;
+    height: auto;
     justify-content: center;
 }
 
+#main-form{
+    background-color:white;
+    border-radius:20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    width:450px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    margin-left:30%;
+    padding-bottom: 20px;
+    margin-top:35px;
+}
+
 #answer-form {
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,21 +45,32 @@ body {
 #result {
     display:flex;
     justify-content: center;
-    margin-top: 20px;
     font-size: 1.5rem;
     font-weight: bold;
-    
+    margin-bottom:5px;
+    text-align:center;
 }
 
 #resetButton {
     display: block;
-    margin: 20px auto;
+    margin: auto;
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #4CAF50;
+    background-color: #f9df4d;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+  }
+
+  #send{
+      margin: auto;
+      padding: 10px 50px;
+      font-size: 16px;
+      background-color: #f9df4d;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
   }
   
