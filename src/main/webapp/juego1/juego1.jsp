@@ -19,6 +19,14 @@
           <p class="wrong-letter">Wrong letters: <span></span></p>
         </div>
         <button class="reset-btn">Reset Game</button>
+        <!--//////////////////////////////////////////////////////////////////////////////// -->
+        <form action="../servletSumaPuntos">
+          <div style="margin-top: 1em;">
+            <button id="checkbutton" type="submit">Check puzzle</button>
+            <input type="number" name="puntos" id="puntos" value="0">
+          </div>
+        </form>
+        <!--//////////////////////////////////////////////////////////////////////////////// -->
       </div>
     </div>
 
