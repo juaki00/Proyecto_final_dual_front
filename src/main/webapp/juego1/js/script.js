@@ -50,7 +50,7 @@ function initGame(e) {
     setTimeout(() => {
         if(correctLetters.length === word.length) {
             counter++;////////puntos
-            sumarPunto();
+            document.getElementById("puntos").value = parseInt(1)+parseInt(document.getElementById("puntos").value);
             alert(`Congrats! You found the word ${word.toUpperCase()}`);
             return randomWord();
         } else if(maxGuesses < 1) {

@@ -3,39 +3,34 @@ body, h1, h2, h3, h4, h5, h6 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #5d6a86;
+    color: white;
 }
 
+/*fondo*/
 body {
-    cursor: default;
-    font-size: small;
+  display: flex;
+  padding: 0 10px;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: #4269f7;
 }
 
+/*cuadrado amarillo welcome*/
 .ecw-answerbox {
-    color: black;
-    background-color: #FFFAF0;
-    border-color: #808080;
+    color: #808080;
+    background-color: #f9df4d;
+    border-color: white;
     border-style: solid;
-    border-width: 1px;
+    border-width: 4px;
+    border-radius: 10px;
     display: block;
     padding: .75em;
     width: 240pt;
 }
 
-.ecw-box {
-    border-style: solid;
-    border-width: 1pt;
-    cursor: pointer;
-    font-size: .12in;
-    font-weight: bold;
-    height: .18in;
-    overflow: hidden;
-    text-align: center;
-    width: .18in;
-}
-
 .ecw-boxcheated_sel {
-    background-color: #FFF1D7;
+    background-color: white;
     border-color: #C00000;
     color: #2080D0;
 }
@@ -70,8 +65,13 @@ body {
     color: #000000;
 }
 
+/*botones de ok, solve y cancel*/
 .ecw-button {
     width: 64pt;
+}
+
+.slv.button{
+visibility: hidden;
 }
 
 .ecw-cluebox {
@@ -86,40 +86,62 @@ body {
     padding-left: 0pt;
     padding-right: 0pt;
     padding-top: .5em;
+    text-align:center;
+    font-size:17px;
+    color:#808080;
 }
 
+.ecw-answerbox h3, p{
+text-align:center;
+color:#808080;
+}
+
+/*cuadrado de fuera del puzzle*/
 .ecw-crosswordarea {
     background-color: #D0D8E0;
-    border-color: #808080;
+    border-color: white;
     border-style: solid;
-    border-width: 2px;
     padding: .5em;
     font-family: "Segoe UI", "Verdana", "Arial", sans-serif;
     font-size: small;
+    border-width: 4px;
+    border-radius: 10px;
 }
 
-.ecw-copyright {
-    margin-bottom: 1em;
-    font-size: x-small;
-    font-family: "Segoe UI", "Franklin Gothic Medium", "Arial", sans-serif;
+/*cada cuadrado del crucigrama*/
+.ecw-box {
+    border-style: solid;
+    border-width: 1pt;
+    cursor: pointer;
+    font-size: .12in;
+    font-weight: bold;
+    height: .18in;
+    overflow: hidden;
+    text-align: center;
+    width: .18in;
 }
 
+/*letras de los botones resolver, ok y cancelar*/
 .ecw-input {
     font-family: "Segoe UI", "Verdana", "Arial", sans-serif;
 }
 
+/*puntitos de cantidad de letras*/
 .ecw-wordlabel {
     text-transform: uppercase;
     margin: 0;
+    color:#808080;
 }
 
+/*across, y el número de letras*/
 .ecw-wordinfo {
-    font-size: 8pt;
+    font-size: 10pt;
     color: #808080;
+    text-align:center;
 }
 
+/*letras cuando te equivocas*/
 .ecw-worderror {
-    color: #c00000;
     font-weight: bold;
     display: none;
     margin-top: 1em;

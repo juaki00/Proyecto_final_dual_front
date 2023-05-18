@@ -1,3 +1,4 @@
+<%@ page pageEncoding="UTF-8" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
 <title>basic</title>
@@ -5,7 +6,6 @@
 	<link rel="stylesheet" href="style.css">
 </head><body>
 
-<h1>basic</h1>
 <h3 style="margin-top: -1em;"></h3>
 
 <div id="waitmessage" class="ecw-answerbox">
@@ -25,10 +25,10 @@
 	CrosswordHeight = 6;
 	Words = 4;
 	WordLength = new Array(5, 5, 6, 4);
-	Word = new Array("ADIOS", "TARDE", "MA�ANA", "HOLA");
+	Word = new Array("ADIOS", "TARDE", "MAÑANA", "HOLA");
 	Clue = new Array("good bye", 
 "afternoon", 
-"morning", 
+"morning",
 "hello");
 	AnswerHash = new Array(51785, 39251, 49860, 58205);
 	WordX = new Array(0, 2, 0, 3);
@@ -261,7 +261,7 @@ function SelectThisWord(event)
 	}
 	
 	document.getElementById("wordlabel").innerHTML = TheirWord;
-	document.getElementById("wordinfo").innerHTML = ((CurrentWord <= LastHorizontalWord) ? "Across, " : "Down, ") + WordLength[CurrentWord] + " letters.";
+	document.getElementById("wordinfo").innerHTML = ((CurrentWord <= LastHorizontalWord) ? "Horizontal, " : "Vertical, ") + WordLength[CurrentWord] + " letras.";
 	document.getElementById("wordclue").innerHTML = Clue[CurrentWord];
 	document.getElementById("worderror").style.display = "none";
 	document.getElementById("cheatbutton").style.display = (Word.length == 0) ? "none" : "";
@@ -305,13 +305,13 @@ function OKClick()
 	}
 	if (TheirWord.length < WordLength[CurrentWord])
 	{
-		document.getElementById("worderror").innerHTML  = "You did not type enough letters.  This word has " + WordLength[CurrentWord] + " letters.";
+		document.getElementById("worderror").innerHTML  = "No has escrito suficientes letras.  Esta palabra tiene " + WordLength[CurrentWord] + " letras.";
 		document.getElementById("worderror").style.display = "block";
 		return;
 	}
 	if (TheirWord.length > WordLength[CurrentWord])
 	{
-		document.getElementById("worderror").innerHTML = "You typed too many letters.  This word has " + WordLength[CurrentWord] + " letters.";
+		document.getElementById("worderror").innerHTML = "Has escrito demasiadas letras.  Esta palabra tiene " + WordLength[CurrentWord] + " letras.";
 		document.getElementById("worderror").style.display = "block";
 		return;
 	}
@@ -433,13 +433,9 @@ function HashWord(Word)
 
 <td valign="top" style="padding-left: 1em;">
 
-<div class="ecw-copyright">
-	<a href="http://www.eclipsecrossword.com/" onclick="this.target='_blank'" style="font-weight: bold;">EclipseCrossword</a> &copy; 2000-2013
-</div>
-
 <div id="welcomemessage" class="ecw-answerbox" style="display:none;">
-<h3>Welcome!</h3>
-<p>Click a word in the puzzle to get started.</p>
+<h3>Crxsswords</h3>
+<p>Haz click en el puzzle para comenzar.</p>
 </div>
 
 <div id="answerbox" class="ecw-answerbox" style="display:none;">
@@ -451,12 +447,21 @@ function HashWord(Word)
 </div>
 <div id="worderror" class="ecw-worderror"></div>
 
-<table border="0" cellspacing="0" cellpadding="0" width="100%" style="margin-top:1em;"><tbody><tr><td>
-<button id="cheatbutton" type="button" class="ecw-input ecw-button" onclick="CheatClick();">Solve</button>
-</td><td align="right">
-<button id="okbutton" type="button" class="ecw-input ecw-button" onclick="OKClick();" style="font-weight: bold;">OK</button> &nbsp;
-<button id="cancelbutton" type="button" class="ecw-input ecw-button" onclick="DeselectCurrentWord();">Cancel</button>
+<table border="0" cellspacing="0" cellpadding="0" width="100%" style="margin-top:1em;"><tbody><tr>
+<td>
+<button id="cheatbutton" type="button" class="slv-button" onclick="CheatClick();"style="display:  none;">Resolver</button>
+</td>
+<td align="right">
+<button id="okbutton" type="button" class="ecw-input ecw-button" onclick="OKClick();" style="font-weight: bold;">Ok</button> &nbsp;
 </td></tr></tbody></table>
+<!--//////////////////////////////////////////////////////////////////////////////// -->
+<form action="../servletSumaPuntos">
+<div style="margin-top: 1em;">
+	<button id="checkbutton" type="input" class="ecw-input ecw-button" onclick="CheckClick();" style="display:  none;">Comprobar</button>
+	<input type="hidden" name="puntos" id="puntos" value="0">
+</div>
+</form>
+<!--//////////////////////////////////////////////////////////////////////////////// -->
 
 </div>
 
@@ -472,15 +477,6 @@ from Green Eclipse&mdash;it's free!
 </div>
 
 </td></tr></table>
-
-<!--//////////////////////////////////////////////////////////////////////////////// -->
-<form action="../servletSumaPuntos">
-<div style="margin-top: 1em;">
-	<button id="checkbutton" type="input" onclick="CheckClick();" style="display:  none;">Check puzzle</button>
-	<input type="hidden" name="puntos" id="puntos" value="0">
-</div>
-</form>
-<!--//////////////////////////////////////////////////////////////////////////////// -->
 
 <script type="text/javascript"><!--
 BeginCrossword();
