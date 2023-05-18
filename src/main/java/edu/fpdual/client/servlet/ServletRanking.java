@@ -11,7 +11,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * Comprueba que el usuario y contraseña son correctos e inicia sesion
+ * Devuelve un set con todos los usuarios registrados y lo almacena en el atributo "listaUsuarios"
  */
 @WebServlet(name = "ServletRanking", urlPatterns = {"/servlet-ranking"})
 public class ServletRanking extends HttpServlet {

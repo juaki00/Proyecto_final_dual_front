@@ -9,12 +9,12 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 /**
- * Inserta usuario si no exisste ese usuario registradoS
+ * Inserta usuario si no exisste ese nick registrado
  */
 @WebServlet(name = "nuevoUsuarioServlet", urlPatterns = {"/nuevo_usuario"})
 public class nuevoUsuarioServlet extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp){
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
         doPost(req, resp);
     }
 
@@ -37,7 +37,7 @@ public class nuevoUsuarioServlet extends HttpServlet {
                 req.getSession().setAttribute("existe", "El nick " + nickIntroducido + " ya existe");
                 resp.sendRedirect("/front/nuevoUsuario.jsp");
 
-            //Si el nick no existe insertamos el usuario
+                //Si el nick no existe insertamos el usuario
             } else {
                 Usuario user = new Usuario(nickIntroducido, passIntroducido, nombreIntroducido, apellidoIntroducido, telefonoIntroducido, emailIntroducido);
                 userServices.insertUser(user);

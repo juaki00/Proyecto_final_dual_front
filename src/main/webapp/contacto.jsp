@@ -14,7 +14,6 @@
       <div class="col-lg-12">
         <div class="page-content">
 
-            <!-- Aqui tu codigo -->
           <!-- Formulario -->
           <form action="./servlet-email" method="POST">
             <p><h3>Contacta con nosotros</h3></p><br>
@@ -43,7 +42,6 @@
           <p><%= (String) request.getSession().getAttribute("error")%></p>
           <% request.setAttribute("error",null);
           }%>
-            <!-- Fin Aqui tu codigo -->
 
         </div>
       </div>

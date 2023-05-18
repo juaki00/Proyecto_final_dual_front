@@ -11,7 +11,8 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * Comprueba que el usuario y contraseña son correctos e inicia sesion
+ * Añade los puntos que hay en el atributo "puntos", los suma al usuario actual
+ * y actualiza la base de datos
  */
 @WebServlet(name = "ServletSumaPuntos", urlPatterns = {"/servletSumaPuntos"})
 public class ServletSumaPuntos extends HttpServlet {
@@ -27,15 +28,19 @@ public class ServletSumaPuntos extends HttpServlet {
             UserServices servicio = new UserServices();
             int puntos = Integer.parseInt(req.getParameter("puntos"));
             if(puntos==0) {
-                req.setAttribute("enhorabuena", "Lo sentimos " + usuario.getNombre() + " , no has conseguido ningun punto, sigue practicando!");
+                req.getSession().setAttribute("enhorabuena", "Lo sentimos " + usuario.getNombre() + " , no has conseguido ningun punto, sigue practicando!");
+
             }
             else{
                 servicio.sumaPuntos(usuario, puntos);
                 req.getSession().setAttribute("usuarioSesion", servicio.userFromNick(usuario.getNick()));
-                req.setAttribute("enhorabuena", "Enhorabuena " + usuario.getNombre() + " , has conseguido " + puntos + " puntos.");
+                req.getSession().setAttribute("enhorabuena", "Enhorabuena " + usuario.getNombre() + " , has conseguido " + puntos + " puntos.");
+
             }
-            req.getRequestDispatcher("/enhorabuena.jsp").forward(req, resp);
-        //Si hay alguna excepcion se redirige a la pagina login y se envia un mensaje de error
+            resp.sendRedirect("/front/enhorabuena.jsp");
+//            req.getRequestDispatcher("/enhorabuena.jsp").forward(req, resp);
+//        Si hay alguna excepcion se redirige a la pagina login y se envia un mensaje de error
+
         } catch (Exception e){
             req.setAttribute("error", e.getMessage());
             req.getRequestDispatcher("/login.jsp").forward(req, resp);

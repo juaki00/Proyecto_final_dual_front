@@ -13,7 +13,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- * Comprueba que el usuario y contraseña son correctos e inicia sesion
+ * Envia un correo con la consulta del usuario y otro email de confirmacion al usuario
  */
 @WebServlet(name = "ServletEmail", urlPatterns = {"/servlet-email"})
 public class ServletEmail extends HttpServlet {
@@ -58,6 +58,12 @@ public class ServletEmail extends HttpServlet {
 
     }
 
+    /**
+     *
+     * Verifica que el formato del email es el correcto
+     * @param correo email a comprobar
+     * @return
+     */
     public static boolean validarCorreo(String correo) {
         // Comprobar si la cadena está vacía o es nula
         if (correo == null || correo.length() == 0) {

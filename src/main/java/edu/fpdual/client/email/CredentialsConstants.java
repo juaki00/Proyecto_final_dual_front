@@ -2,7 +2,6 @@ package edu.fpdual.client.email;
 
 /**
  * credentials Constants class.
- * @author jose.m.prieto.villar
  *
  */
 public class CredentialsConstants {

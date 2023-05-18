@@ -14,9 +14,7 @@ import java.io.*;
 import java.util.Properties;
 
 /**
- * Email sender example with and without attachment.
- * @author jose.m.prieto.villar
- * @version 1.0
+ * Envio de email.
  */
 public class Sender {
 

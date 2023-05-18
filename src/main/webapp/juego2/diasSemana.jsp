@@ -395,7 +395,6 @@ function CheckClick()
 		document.getElementById("welcomemessage").innerHTML = ErrorsFound + (ErrorsFound > 1 ? " errors were" : " error was") + " found.";
 	else if (EmptyFound > 0)
 		document.getElementById("welcomemessage").innerHTML = "No errors were found, but " + EmptyFound + (EmptyFound > 1 ? " incomplete words were" : " incomplete word was") + " found.";
-	
 	if (ErrorsFound + EmptyFound > 0)
 	{
 		document.getElementById("welcomemessage").style.display = "";

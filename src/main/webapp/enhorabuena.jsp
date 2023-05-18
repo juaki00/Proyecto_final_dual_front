@@ -3,7 +3,6 @@
 <html lang="en">
 
 <head>
-
     <%@include file="head.jsp"%>
 </head>
 <body>
@@ -14,11 +13,12 @@
         <div class="col-lg-12">
             <div class="page-content">
 
-                <%if(request.getAttribute("enhorabuena")!=null){%>
-                <p><h5><%=request.getAttribute("enhorabuena")%></h5></p>
+                <%if(session.getAttribute("enhorabuena")!=null){%>
+                <p><h5><%=session.getAttribute("enhorabuena")%></h5></p>
+                <%session.setAttribute("enhorabuena",null);%>
                 <%}%>
-                <%if(request.getAttribute("error")!=null){%>
-                <p><h5><%=request.getAttribute("error")%></h5></p>
+                <%if(session.getAttribute("error")!=null){%>
+                <p><h5><%=session.getAttribute("error")%></h5></p>
                 <%}%>
                 <!-- Formulario -->
                 <form action="./index.jsp" method="POST">
